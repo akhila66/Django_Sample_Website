@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center text-md-left p-2">
+            <h1>form 2</h1>
+            <form method="post" action="{% url 'form3' %}">
+                {% csrf_token %}
+                <div class="form-group">
+                <label for="text1">Sample Text 1 </label>
+                <input type="text" class="form-control" id="text1" aria-describedby="emailHelp" placeholder=" Text 1">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your name with anyone else.</small>
+                </div>
+                <div class="form-group">
+                <label for="text2">Sample Text 2</label>
+                <input type="number" class="form-control" id="text2" placeholder="Text 2">
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Save and Next</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
